@@ -1,0 +1,65 @@
+@use "../abstracts";
+
+.slides-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 40vh;
+  .slider {
+    position: relative;
+    width: 85vw;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 4px 1px 10px 0px #dde0d2;
+    &:hover {
+      transform: scale(1.01);
+    }
+    .slide {
+      position: absolute;
+      transition-duration: 1s ease;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      &.slide-active {
+        transition-duration: 1s;
+        opacity: 1;
+        img.imageSlide {
+          width: 100%;
+          height: 100%;
+          border-radius: 25px;
+          object-fit: cover;
+        }
+      }
+    }
+    .slider-count {
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    .next,
+    .prev {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      z-index: 10;
+      cursor: pointer;
+      user-select: none;
+    }
+    .prev {
+      top: 40%;
+      left: 32px;
+    }
+    .next {
+      top: 40%;
+      right: 32px;
+    }
+  }
+}

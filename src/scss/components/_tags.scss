@@ -1,0 +1,18 @@
+@use '../abstracts';
+
+.tag{
+    display: flex;
+    button{
+        width: inherit;
+        height: 25px;
+        background-color: abstracts.$color-primary;
+        margin-right: 10px;
+        border-radius: 10px;
+        color: abstracts.$color-white;
+        border: none;
+        padding: 0px 30px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+

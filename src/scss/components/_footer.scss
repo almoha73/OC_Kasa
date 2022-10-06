@@ -1,0 +1,24 @@
+@use '../abstracts';
+
+footer{
+  width: 100%;
+  height: 289px;
+  background-color: abstracts.$color-black;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  svg{
+    margin-top: 66px;
+    margin-bottom: 28px;
+    path{
+        fill: abstracts.$color-white;
+        width: 122px;
+    }
+    
+  }
+  p{
+    font-size: 24px;
+    color: abstracts.$color-white;
+  }  
+}

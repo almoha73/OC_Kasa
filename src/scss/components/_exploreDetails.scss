@@ -1,0 +1,62 @@
+@use "../abstracts";
+
+.logement-img {
+  width: calc(100% - 200px);
+  margin-left: 100px;
+  height: 415px;
+  object-fit: cover;
+  margin-top: 25px;
+  border-radius: 25px;
+}
+.logement-title {
+  display: flex;
+  margin-top: 30px;
+  height: auto;
+  .title-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(80% - 200px);
+    margin-left: 100px;
+    height: fit-content;
+  }
+
+  h1 {
+    color: abstracts.$color-primary;
+
+    font-size: 36px;
+    font-weight: 500;
+  }
+  h2 {
+    color: abstracts.$color-primary;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .host-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 20%;
+    height: unset;
+    .host {
+      display: flex;
+      align-items: center;
+      .host-name {
+        color: abstracts.$color-primary;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      .host-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+    }
+    .rating {
+      display: flex;
+      
+    }
+  }
+}

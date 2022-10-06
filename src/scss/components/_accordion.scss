@@ -1,0 +1,52 @@
+@use "../abstracts";
+
+.accordion-bloc {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 200px);
+  margin-left: 100px;
+  margin-top: 50px;
+  gap: 20px;
+}
+.accordion {
+  height: auto;
+  border-radius: 3px;
+  
+  
+  .accordion-visible {
+    box-shadow: 4px 1px 10px 0px abstracts.$color-primary;
+    background-color: abstracts.$color-primary;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 13px;
+    border-radius: 10px;
+    color: abstracts.$color-white;
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .accordion-toggle {
+    box-shadow: 4px 1px 10px 0px abstracts.$color-primary;
+    font-size: 18px;
+    text-align: justify;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
+    //margin-bottom: 250px;
+    margin-bottom: 31px;
+    &.animated {
+      opacity: 1;
+      transition: height 0.4s ease-in-out, opacity 0.4s 0.4s ease-in-out;
+    }
+    .accordion-toggle-text {
+      padding: 22px 15px;
+      pointer-events: none;
+      line-height: 2;
+      color: abstracts.$color-primary;
+      background-color: abstracts.$color-accordion-grey;
+      list-style: none;
+    }
+  }
+}
